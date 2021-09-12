@@ -59,7 +59,9 @@ export default function CardTemplate(props) {
                 <Typography className={classes.heading}>Description</Typography>
             </AccordionSummary>
             <AccordionDetails>
-                <Typography>{description}</Typography>
+                <Typography>
+                (Created by: <a style={{'cursor':'pointer','textDecoration':'none','color':'black','font-weight': 'bold'}} 
+                href="https://github.com/BartekK2" rel="noreferrer noopener" target='_blank'>BartekK2</a> <GitHubIcon style={{'margin':'0 3px','fontSize':'inherit'}}></GitHubIcon>) {description}</Typography>
             </AccordionDetails>
         </Accordion>
         {props.children}

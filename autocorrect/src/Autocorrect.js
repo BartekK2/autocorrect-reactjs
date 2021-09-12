@@ -32,7 +32,8 @@ const UseEffectExample = () => {
       },[searchvalue, language]);
 
     const countryCodes = [['English','en'],['Polish','pl'],['German','de'],['French','fr'],['Dutch','nl'],['Russian','ru'],['Italian','it'],['Spanish','es'],['Japanese','ja']]
-      return (
+    {/*And so one, i could write it by myself or use some library but im just lazy XD*/}
+    return (
         <>
             <div style={{'margin':'0 30%'}}>
                 <Autocomplete
