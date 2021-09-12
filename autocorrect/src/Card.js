@@ -65,7 +65,7 @@ export default function CardTemplate(props) {
         {props.children}
       </CardContent>
       <CardActions>
-        <Button size="small" target="_blank" href={learnmore}>Link to <GitHubIcon style={{'margin':'0 7px','font-size':'inheritive'}}></GitHubIcon> repo</Button>
+        <Button size="small" target="_blank" href={learnmore}>Link to <GitHubIcon style={{'margin':'0 7px'}}></GitHubIcon> repo</Button>
       </CardActions>
     </Card>
   );

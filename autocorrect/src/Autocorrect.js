@@ -19,15 +19,15 @@ const WikiLinks = (props) => {
 const UseEffectExample = () => {
     const [searchvalue, setSearch] = useState("");
     const [guesses, setGuess] = useState([])
-    const [language, setLanguage] = useState("pl")
+    const [language, setLanguage] = useState("en")
 
     useEffect(() => {
         console.log(language)
         fetch(`https://${language}.wikipedia.org/w/api.php?&origin=*&action=opensearch&profile=strict&search=` + searchvalue + "&limit=10").then(function(resp) {
             return resp.json()
         }).then(function(data) {
-            let przefiltrowane = data[1].filter((e)=>{return e.split(' ').length===1 && e.length > 1})
-            setGuess([przefiltrowane[0], przefiltrowane[1]]);
+            let filtrated = data[1].filter((e)=>{return e.split(' ').length===1 && e.length > 1})
+            setGuess([filtrated[0], filtrated[1]]);
         })
       },[searchvalue, language]);
 
@@ -50,7 +50,7 @@ const UseEffectExample = () => {
 
                     <TextField
                                 id="login"
-                                onChange={(event) => {setSearch(event.target.value);/*Wiki();*/}} // !!! tak sie robi onChange !!!
+                                onChange={(event) => {setSearch(event.target.value);}}
                                 label="Enter anything"
                                 variant="outlined"
                                 inputProps={{
