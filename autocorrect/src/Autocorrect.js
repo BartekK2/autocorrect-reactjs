@@ -69,7 +69,7 @@ const UseEffectExample = () => {
             </Alert> :
             <Alert severity="error">No matching words were found.</Alert>
             }
-            
+            <p>Test </p>
         </>
     );
 }
